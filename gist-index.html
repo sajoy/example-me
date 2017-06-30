@@ -11,7 +11,23 @@
         <p>3. Wait, I forgot to ask: what's your name?</p>
         <p>4. Okay, what do you think this emoji means?</p>
         <script>
-            alert( 'helloooo world!' );
+            var favEmoji = prompt( 'What\'s your favorite emoji?' );
+            console.log( 'The user\'s favorite emoji is: ' + favEmoji );
+            alert( 'I also like the ' + favEmoji + ' emoji!' );
+
+            var leastFavEmoji = prompt( 'What\'s your least favorite emoji?' );
+            console.log( 'Their least fav is: ' + leastFavEmoji );
+            alert( 'Ooooh, the ' + leastFavEmoji + ', really??' );
+
+            var name =prompt( 'Wait! I forgot to ask: what is your name???' );
+            console.log( 'Their name is: ' + name );
+            alert( 'Greetings ' + name + ', who likes the' + favEmoji + ' emoji and not the ' + leastFavEmoji + 'emoji!!!' );
+
+            var translation = prompt( 'Okay, last question ' + name + ', what does this emoji mean: 🤗');
+            console.log( name + ' thinks the emoji means: ' + translation );
+            alert( 'Rad! You\'re totally... maybe right.' );
+            alert( 'Thanks for playing ' + name + '!! ✌️' );
+
         </script>
     </body>
 </html>
