@@ -1,0 +1,9 @@
+h1 {
+    font-family: sans-serif;
+}
+
+p {
+    font-family: monospace;
+    text-align: right;
+    width: 50%;
+}
