@@ -38,11 +38,11 @@ var questions = [
     ]
 ];
 
-for ( var i = 0; i < questions.length; i ++ ) {
-    var question = questions[i][0];
-    var correctAnswer = questions[i][1];
-    var badReply = questions[i][2];
-    var correctReply = questions[i][3];
+function askQuestion ( questionData ) {
+    var question = questionData[0];
+    var correctAnswer = questionData[1];
+    var badReply = questionData[2];
+    var correctReply = questionData[3];
 
     var guess = prompt( question ).toLowerCase()[0];
     console.log( question + ' : ' + guess );
@@ -55,49 +55,61 @@ for ( var i = 0; i < questions.length; i ++ ) {
 }
 
 
+function numberGame () {
+    var totalGuesses = 0;
+    for ( var i = 0; i < 4; i ++ ) {
+        var numberGuess = parseInt( prompt( 'Okay, ' + username + ', guess how many years I have lived overseas.' ));
+        console.log( 'number of years I lived overseas :' + username + ' guessed ' + numberGuess + ' years.' );
+        totalGuesses++;
+        var guessesLeft = 4 - totalGuesses;
 
-var totalGuesses = 0;
-for ( var i = 0; i < 4; i ++ ) {
-    var numberGuess = parseInt( prompt( 'Okay, ' + username + ', guess how many years I have lived overseas.' ));
-    console.log( 'number of years I lived overseas :' + username + ' guessed ' + numberGuess + ' years.' );
-    totalGuesses++;
-    var guessesLeft = 4 - totalGuesses;
+        if ( numberGuess === 3 ) {
+            score++;
+            alert( 'That\'s right!!! I lived in the Philippines for 3 years.' );
+            break;
+        } else if ( numberGuess < 3 ) {
+            alert( 'Higher...' + username + ', you have ' + guessesLeft + ' guesses left.' );
+        } else if ( numberGuess > 3 ) {
+            alert( 'Lower....' + username + ', you have ' + guessesLeft + ' guesses left.' );
+        }
+    }
+}
 
-    if ( numberGuess === 3 ) {
-        score++;
-        alert( 'That\'s right!!! I lived in the Philippines for 3 years.' );
-        break;
-    } else if ( numberGuess < 3 ) {
-        alert( 'Higher...' + username + ', you have ' + guessesLeft + ' guesses left.' );
-    } else if ( numberGuess > 3 ) {
-        alert( 'Lower....' + username + ', you have ' + guessesLeft + ' guesses left.' );
+
+function stateGame () {
+    var states = [ 'california', 'virginia', 'oregon' ];
+    var correctGuess = false;
+    var stateGuesses = 0;
+    while ( correctGuess === false ) {
+        var stateGuess = prompt( 'Guess a state that I\'ve lived in. You have 6 guesses.' ).toLowerCase();
+        console.log( username + ' guessed that you live in ' + stateGuess );
+
+        if ( states.indexOf( stateGuess ) > -1 ) {
+            alert( 'Great job, ' + username + '! I did live in ' + stateGuess 
+                    + '. Here are the other states I lived in: ' + states.join(', ') );
+            score++;
+            correctGuess = true;
+        } else {
+            alert( 'Nope ' + username + '! I didn\'t live in ' + stateGuess + '.');
+            stateGuesses++;
+        }
+
+        if ( stateGuesses === 6 ) {
+            alert( 'Sorry ' + username + '! You\'re out of guesses. '
+                    + '. Here are the states I lived in: ' + states.join(', ') );
+            break;
+        }
     }
 }
 
 
 
-var states = [ 'california', 'virginia', 'oregon' ];
-var correctGuess = false;
-var stateGuesses = 0;
-while ( correctGuess === false ) {
-    var stateGuess = prompt( 'Guess a state that I\'ve lived in. You have 6 guesses.' ).toLowerCase();
-    console.log( username + ' guessed that you live in ' + stateGuess );
 
-    if ( states.indexOf( stateGuess ) > -1 ) {
-        alert( 'Great job, ' + username + '! I did live in ' + stateGuess 
-                + '. Here are the other states I lived in: ' + states.join(', ') );
-        score++;
-        correctGuess = true;
-    } else {
-        alert( 'Nope ' + username + '! I didn\'t live in ' + stateGuess + '.');
-        stateGuesses++;
-    }
-
-    if ( stateGuesses === 6 ) {
-        alert( 'Sorry ' + username + '! You\'re out of guesses. '
-                + '. Here are the states I lived in: ' + states.join(', ') );
-        break;
-    }
+for ( var i = 0; i < questions.length; i ++ ) {
+    askQuestion( questions[i] );
 }
 
+numberGame();
+stateGame();
+ 
 alert( 'Thanks for playing ' + username + '!! You got ' + score + ' questions right!' );
