@@ -45,20 +45,20 @@ if ( guessFive === 'no' || guessFive === 'n' ) {
     alert( 'Of course ' + username + '! Give me a slice of Hawaiian, please.' );
 }
 
-
-var totalGuesses = 4;
-do {
+var totalGuesses = 0;
+for ( var i = 0; i < 4; i ++ ) {
     var numberGuess = parseInt( prompt( 'Okay, ' + username + ', guess how many years I have lived overseas.' ));
     console.log( 'number of years I lived overseas :' + username + ' guessed ' + numberGuess + ' years.' );
-    totalGuesses--;
+    totalGuesses++;
+    var guessesLeft = 4 - totalGuesses;
 
     if ( numberGuess === 3 ) {
         alert( 'That\'s right!!! I lived in the Philippines for 3 years.' );
-        totalGuesses = 0;
+        break;
     } else if ( numberGuess < 3 ) {
-        alert( 'Higher...' + username + ', you have ' + totalGuesses + ' guesses left.' );
+        alert( 'Higher...' + username + ', you have ' + guessesLeft + ' guesses left.' );
     } else if ( numberGuess > 3 ) {
-        alert( 'Lower....' + username + ', you have ' + totalGuesses + ' guesses left.' );
+        alert( 'Lower....' + username + ', you have ' + guessesLeft + ' guesses left.' );
     }
+}
 
-} while ( totalGuesses > 0 );
