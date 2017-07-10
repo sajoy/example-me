@@ -7,3 +7,7 @@ p {
     text-align: right;
     width: 50%;
 }
+
+li {
+    font-family: monospace;
+}
