@@ -13,7 +13,7 @@ if ( guessOne === 'no' || guessOne === 'n' ) {
     alert( 'Yay ' + username + '! You are right. Pink is my favorite color.' );
 }
 
-var guessOne = prompt( 'Am I a sports fanatic?' ).toLowerCase();
+var guessTwo = prompt( 'Am I a sports fanatic?' ).toLowerCase();
 console.log( 'am i a sports fanatic : ' + username + ' guessed ' + guessTwo );
 if ( guessTwo === 'no' || guessTwo === 'n' ) {
     alert( 'Yay ' + username + '! You are 100% right.' );
@@ -21,26 +21,26 @@ if ( guessTwo === 'no' || guessTwo === 'n' ) {
     alert( 'Nope ' + username + ', I am not a big sports fan.' );
 }
 
-var guessOne = prompt( 'Am I a dog person?' ).toLowerCase();
-console.log( 'am i a dog person : ' + username + ' guessed ' + guessOne );
-if ( guessOne === 'no' || guessOne === 'n' ) {
-    alert( 'Sorry ' + username + '! Pink is my favorite color.' );
-} else if ( guessOne === 'yes' || guessOne === 'y' ) {
-    alert( 'Yay ' + username + '! You are right. Pink is my favorite color.' );
+var guessThree = prompt( 'Am I a dog person?' ).toLowerCase();
+console.log( 'am i a dog person : ' + username + ' guessed ' + guessThree );
+if ( guessThree === 'no' || guessThree === 'n' ) {
+    alert( 'That\'s right ' + username + '! I am def a cat person.' );
+} else if ( guessThree === 'yes' || guessThree === 'y' ) {
+    alert( 'Sorry ' + username + ', I prefer cats.' );
 }
 
-var guessOne = prompt( 'Is pink my favorite color?' ).toLowerCase();
-console.log( 'pink is my favorite color : ' + username + ' guessed ' + guessOne );
-if ( guessOne === 'no' || guessOne === 'n' ) {
-    alert( 'Sorry ' + username + '! Pink is my favorite color.' );
-} else if ( guessOne === 'yes' || guessOne === 'y' ) {
-    alert( 'Yay ' + username + '! You are right. Pink is my favorite color.' );
+var guessFour = prompt( 'Do I like to write?' ).toLowerCase();
+console.log( 'do i like to write : ' + username + ' guessed ' + guessFour );
+if ( guessFour === 'no' || guessFour === 'n' ) {
+    alert( 'Sorry ' + username + '! I like it so much I majored in it.' );
+} else if ( guessFour === 'yes' || guessFour === 'y' ) {
+    alert( 'Yay ' + username + '! You are right. I <3 writing.' );
 }
 
-var guessOne = prompt( 'Is pink my favorite color?' ).toLowerCase();
-console.log( 'pink is my favorite color : ' + username + ' guessed ' + guessOne );
-if ( guessOne === 'no' || guessOne === 'n' ) {
-    alert( 'Sorry ' + username + '! Pink is my favorite color.' );
-} else if ( guessOne === 'yes' || guessOne === 'y' ) {
-    alert( 'Yay ' + username + '! You are right. Pink is my favorite color.' );
+var guessFive = prompt( 'Do I like pizza?' ).toLowerCase();
+console.log( 'like pizza : ' + username + ' guessed ' + guessFive );
+if ( guessFive === 'no' || guessFive === 'n' ) {
+    alert( '....' + username + '.... who doesn\'t like pizza? WRONG.' );
+} else if ( guessFive === 'yes' || guessFive === 'y' ) {
+    alert( 'Of course ' + username + '! Give me a slice of Hawaiian, please.' );
 }
