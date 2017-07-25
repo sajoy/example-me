@@ -1,5 +1,14 @@
 body {
     padding: 8% 5%;
+    background-image: url(https://s-media-cache-ak0.pinimg.com/736x/31/f2/0f/31f20f8481ee255c496b233bc92a8100--android-emoji-things-i-want.jpg);
+    background-size: 200px;
+    background-position: center right;
+    width: 50%;
+}
+
+main {
+    background-color: rgba( 255, 255, 255, .8 );
+    padding: 5%;
 }
 
 h1 {
@@ -9,7 +18,6 @@ h1 {
 p {
     font-family: monospace;
     text-align: right;
-    width: 50%;
 }
 
 li {
